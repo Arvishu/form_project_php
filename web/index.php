@@ -16,27 +16,27 @@ $emailText ="";
     if(empty($firstname)){
         $firstnameError = "Je veux connaitre ton prenom !";
         $isSuccess = false;
-    }else {$emailText .="Firstname: $firstname/n";}
+    }else {$emailText .="Firstname: $firstname\n";}
 
     if(empty($name)){
         $nameError = "Je veux aussi connaitre ton nom !";
         $isSuccess = false;
-    }else {$emailText .="name: $name/n";}
+    }else {$emailText .="name: $name\n";}
 
     if(!isEmail($email)){
         $emailError = "Il faut saisir un email valide.";
         $isSuccess = false;
-    }else {$emailText .="email: $email/n";}
+    }else {$emailText .="email: $email\n";}
 
     if(!isPhone($phone)){
         $phoneError ="Que des chiffres et des espaces s'il te plait.";
         $isSuccess = false;
-    }else {$emailText .="phone: $phone/n";}
+    }else {$emailText .="phone: $phone\n";}
 
     if(empty($message)){
         $messageError = "Que veux tu me dire ?";
         $isSuccess = false;
-    }else {$emailText .="message: $message/n";}
+    }else {$emailText .="message: $message\n";}
 
     if($isSuccess){
         $headers = "From: $firstname $name <$email>\r\nReply-To: $email";
